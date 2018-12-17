@@ -1,0 +1,16 @@
+<h2>Create a new song</h2>
+<%= link_to 'Back', song_index_path %>
+
+<%= form_for @song do |f| %>
+<%= f.label :song[:name] %>
+<%= f.text_field :song[:name %>
+
+<%= f.label :song[:artist_id] %>
+<%= f.text_field :song[:artist_id] %>
+
+<%= f.label :song[:genre_id] %>
+<%= f.text_field :song[:genre_id] %>
+
+<%= f.submit %>
+
+<% end %>
