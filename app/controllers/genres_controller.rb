@@ -12,11 +12,11 @@ class GenresController < ApplicationController
 
   def create
     @genre = Genre.create(genre_params)
-    redirect_to genre_index_path
+    redirect_to genres_path
   end
 
   def show
-    redirect_to genre_path
+
   end
 
   def edit
@@ -24,11 +24,12 @@ class GenresController < ApplicationController
 
   def update
     @genre.update(genre_params)
+    redirect_to genres_path
   end
 
   def destroy
     @genre.delete
-    redirect_to genre_index_path
+
   end
 
   private

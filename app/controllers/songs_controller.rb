@@ -12,11 +12,11 @@ class SongsController < ApplicationController
 
   def create
     @song = Song.create(song_params)
-    redirect_to song_index_path
+    redirect_to songs_path
   end
 
   def show
-    redirect_to song_path
+
   end
 
   def edit
@@ -24,11 +24,12 @@ class SongsController < ApplicationController
 
   def update
     @song.update(song_params)
+    redirect_to songs_path
   end
 
   def destroy
     @song.delete
-    redirect_to song_index_path
+
   end
 
   private

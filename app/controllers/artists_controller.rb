@@ -12,11 +12,11 @@ class ArtistsController < ApplicationController
 
   def create
     @artist = Artist.create(artist_params)
-    redirect_to artist_index_path
+    redirect_to artists_path
   end
 
   def show
-    redirect_to artist_path
+
   end
 
   def edit
@@ -24,11 +24,12 @@ class ArtistsController < ApplicationController
 
   def update
     @artist.update(artist_params)
+    redirect_to artists_path
   end
 
   def destroy
     @artist.delete
-    redirect_to artist_index_path
+
   end
 
   private
