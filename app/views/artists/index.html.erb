@@ -1,6 +1,11 @@
-<% @artists.each do |artist| %>
-<<ul>
-    <div><%= artist.name %></div>
-</ul>
+<h2>All Artists</h2>
 
-<% end %>
+<%= link_to 'create a new artist', new_artist_path %>
+
+<ul>
+  <% @artists.each do |artist| %>
+    <li>
+      <%= link_to artist.name, artist %>
+    </li>
+  <% end %>
+</ul>

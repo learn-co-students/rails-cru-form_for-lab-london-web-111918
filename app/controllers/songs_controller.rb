@@ -5,15 +5,22 @@ class SongsController < ApplicationController
     @songs = Song.all
   end
 
-  def show
-
-  end
 
   def new
     @song = Song.new
   end
 
+  def show
+
+  end
+
   def create
+    # song params => artist_id: "andy"
+    # ONly accept integer id values
+    # Or accept names, but then search artists for that names
+    # @artist = Aritst.find_by_or_create(name: )
+
+    # look into collection_select
     @song = Song.create(song_params)
     redirect_to song_path(@song)
   end
