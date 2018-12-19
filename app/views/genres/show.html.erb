@@ -1,0 +1,10 @@
+<h1> <%= @genre.name %> </h1>
+
+<% @genre.songs.map do |song| %>
+ <p>
+   <%= link_to song.name, song %>
+   <% end %>
+ </p>
+<p>
+
+<%= link_to 'genres', genres_path %>
