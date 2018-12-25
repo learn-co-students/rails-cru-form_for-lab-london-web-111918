@@ -1,0 +1,13 @@
+<h2>My Edit</h2>
+
+<%= form_for(@artist) do |f| %>
+<%= f.label :name %>
+<%= f.text_field :name %>
+<br>
+<%= f.label :bio %>
+<%= f.text_field :bio %>
+
+<%= f.submit %>
+<% end %>
+<br>
+<%= link_to 'back', artists_path %>
